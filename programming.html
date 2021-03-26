@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Stela H. Seo">
+    <meta name="description" content="">
+    <title>Stela H. Seo</title>
+    <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <!--[if lte IE 8]><link rel="stylesheet' href="css/ie8.css"/><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet' href="css/ie9.css"/><![endif]-->
+</head>
+<body>
+
+<!-- ========================= NAVBAR ========================= -->
+<nav id="nav">
+    <ul class="container">
+        <h2><a href="index.html">Stela H. Seo</a></h2>
+        <li><a href="contents/cv.pdf" target="_blank">CV</a></li>
+        <li><a href="phd.html">Ph.D.</a></li>
+        <li><a href="msc.html">M.Sc.</a></li>
+        <li><a href="bcsc.html">B.C.Sc.Hons.</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="programming.html">Programming</a></li>
+    </ul>
+</nav>
+<div class="wrapper style3">
+    <article id="portfolio">
+        <div class="container project-detail">
+            <header>
+                <h2>My programming activities</h2>
+            </header>
+            <div class="row center">
+                <h2>Summary</h2>
+                <p>
+                    As a hobbyist programmer, I developed many programs that help me and my family members in general.
+                    But I have never bothered to share or upload them to any website.
+                    Recently, however, one of my sisters strongly wanted me to post one program that I developed for her.
+                    Since then, I am planning to slowly upload some programs that may be useful for others as well.
+                    <br />
+                    <br />
+                    This page will be <strong>slowly</strong> filling up with my software and explanation.
+                </p>
+            </div>
+
+            <div class="row">
+                <h2>FASTA Selector</h2>
+                <p>
+                    <img class="image-right" src="images/2020-FASTASelector.png" />
+                    To simply put, this program is to view sequences (loaded from a FASTA file) and remove selected entries.
+                    <br />
+                    <br />
+                    If the sequence header consists of some metadata (for example, >ID|NAME|LOCATION), then you can specify them in the option to let the program parse in such way.
+                    Then, when the program reads metadata, it will try to match a sequence to a metadata entry.
+                    <br />
+                    <br />
+                    This program has been written and tested to meet the requirements specified by my sister.
+                    So, the program may have limited functionalities and features.
+                    The program is written using C# WPF. To run this program, you need <a href="https://www.microsoft.com/en-ca/download/details.aspx?id=30653" target="_blank">.Net Framework 4.5</a>.
+                    <br />
+                    <br />
+                    Download: <a href="https://github.com/stelaseo/FASTASelector/releases/download/v1.0.1.2/FASTASelector-bin.zip">Binary v1.0.1.2</a>
+                    <br />
+                    Download: <a href="https://github.com/stelaseo/FASTASelector">Source code</a>
+                    <br />
+                    <br />
+                    v1.0.1.2: added a feature (automatically select metadata when a sequence is selected).<br />
+                    v1.0.1.1: removed byte order mark (BOM) for UTF-8 encoding.<br />
+                    v1.0.1.0: added features (metadata, redo, and undo).<br />
+                    v1.0.0.0: initial version.<br />
+                </p>
+            </div>
+
+        </div>
+    </article>
+</div>
+<!-- FOOTER -->
+<div class="wrapper style4">
+    <footer>
+        <ul id="copyright">
+            <li>&copy; 2020 Stela H. Seo</li>
+            <li>HTML5 Template retrieved from <a href="http://html5up.net">HTML5 UP</a> and modified for personal use.</li>
+        </ul>
+    </footer>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-viewport.min.js"></script>
+<script src="js/util.js"></script>
+<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+<script src="js/main.js"></script>
+<script src="js/mailto.js"></script>
+</body>
+</html>
