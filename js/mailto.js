@@ -7,7 +7,7 @@ $(document).ready( function( )
         if( myName != undefined && myName != null && "email" in json )
         {
             var addr = json["email"].replace( "@A@T@", "@" );
-            for( var i = 0; i < 3; i++ )
+            for( var i = 0; i < 4; i++ )
             {
                 addr = addr.replace( "#D#O#T#", "." );
             }
