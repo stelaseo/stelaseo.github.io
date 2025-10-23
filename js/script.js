@@ -28,13 +28,15 @@ function updateTheme( darkMode )
     {
         $("#themeMarkerLight").css( "display", "none" );
         $("#themeMarkerDark").css( "display", "block" );
+        document.body.classList.add( "dark-mode" );
         localStorage.setItem( "theme", "dark-mode" );
     }
     else
     {
         $("#themeMarkerLight").css( "display", "block" );
         $("#themeMarkerDark").css( "display", "none" );
-        localStorage.setItem( "theme", "" );
+        document.body.classList.remove( "dark-mode" );
+        localStorage.setItem( "theme", "light-mode" );
     }
 }
 
