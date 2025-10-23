@@ -1,0 +1,287 @@
+/* 
+-------------------
+1. CSS Variables for Theming
+-------------------
+*/
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #f8f9fa;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --heading-color: #111;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --card-bg-color: #ffffff;
+}
+
+body.dark-mode {
+    --primary-color: #4dabf7;
+    --secondary-color: #343a40;
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --border-color: #444;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --card-bg-color: #1e1e1e;
+}
+
+
+/* 
+-------------------
+2. General Styles & Reset
+-------------------
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--heading-color);
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+/* 
+-------------------
+3. Header Section
+-------------------
+*/
+.cv-header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cv-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.2em;
+}
+
+.cv-header .profile-wrapper {
+    column-count: 2;
+}
+
+.cv-header .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+    margin-left: -150px;
+}
+
+.cv-header .job-title {
+    font-size: 1.4em;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-left: -150px;
+}
+
+.cv-header .job-description {
+    display:inline-block;
+    font-size: 1.2em;
+    color: var(--text-color);
+    font-weight: 450;
+    text-align: justify;
+    margin-bottom: 15px;
+    margin-left: -150px;
+}
+
+.cv-header .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+    margin-left: -150px;
+}
+
+.cv-header .contact-info a {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cv-header .contact-info i {
+    width: 20px;
+    text-align: center;
+}
+
+.cv-header .imgbtn img {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* 
+-------------------
+4. Footer Section
+-------------------
+*/
+.cv-footer {
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.cv-footer .copyright {
+    text-align: left;
+    padding-bottom: 16px;
+}
+
+.cv-footer .copyright i {
+    margin: 0 8px;
+    color: var(--text-color);
+}
+
+.cv-footer .resources {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    align-items: center;
+    text-align: right;
+    font-size: 0.7em;
+}
+
+
+/* 
+-------------------
+5. Main Sections
+-------------------
+*/
+.section {
+    margin-bottom: 20px;
+}
+
+.experience-item, .education-item, .publication-item {
+    margin-bottom: 25px;
+}
+
+.experience-item h3, .education-item h3, .publication-item h3 {
+    font-size: 1.2em;
+    color: var(--heading-color);
+}
+
+.experience-item .details, .education-item .details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.publication-item .details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.publication-item .details p {
+    margin-bottom: 8px;
+}
+
+
+/* 
+-------------------
+6. Skills Section
+-------------------
+*/
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background-color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+/* 
+-------------------
+7. Responsive Design
+-------------------
+*/
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .cv-header h1 {
+        font-size: 2.2em;
+    }
+
+    .cv-header .job-title {
+        font-size: 1.2em;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .experience-item .details, .education-item .details, .publication-item .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
